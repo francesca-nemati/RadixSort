@@ -45,6 +45,37 @@ public class TestRadix {
     System.out.println(o.toString());
     Radix.merge(o,b);
     System.out.println(o.toString());
+
+    SortableLinkedList data = new SortableLinkedList();
+    data.add(12);
+    data.add(34);
+    data.add(42);
+    data.add(32);
+    data.add(44);
+    data.add(41);
+    data.add(34);
+    data.add(11);
+    data.add(32);
+    data.add(23);
+    data.add(87);
+    data.add(50);
+    data.add(77);
+    data.add(58);
+    data.add(8);
+    System.out.println(data.toString());
+    Radix.radixSortSimple(data);
+    System.out.println(data.toString());
+
+    SortableLinkedList data2 = new SortableLinkedList();
+    data2.add(10);
+    data2.add(52);
+    data2.add(5);
+    data2.add(209);
+    data2.add(19);
+    data2.add(44);
+    System.out.println(data2.toString());
+    Radix.radixSortSimple(data2);
+    System.out.println(data2.toString());
   }
 
 }
