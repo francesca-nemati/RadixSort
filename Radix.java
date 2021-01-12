@@ -33,7 +33,7 @@ public class Radix {
       for (int j = 0; j < data.size(); j++) {
         int d = data.get(j);
         if (i == 1) {
-          if (d > largest) largest = d;
+          if (Math.abs(d) > largest) largest = d;
         }
         int n = nth(d, i);
         buckets[n].add(d);
@@ -43,6 +43,19 @@ public class Radix {
       merge(data, buckets);
       passes = length(largest);
     }
+  }
+
+  public static SortableLinkedList radixSort(SortableLinkedList data) {
+    SortableLinkedList negData = new SortableLinkedList();
+    for (int i = 0; i < data.size(); i++) {
+      int d = data.get(i);
+      if (d < 0) {
+        negData.add(d);
+        data.remove(i);
+        i--;
+      }
+    }
+    return negData;
   }
 
 }
