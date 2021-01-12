@@ -76,6 +76,17 @@ public class TestRadix {
     System.out.println(data2.toString());
     Radix.radixSortSimple(data2);
     System.out.println(data2.toString());
+
+    SortableLinkedList ndata = new SortableLinkedList();
+    ndata.add(10);
+    ndata.add(-52);
+    ndata.add(5);
+    ndata.add(209);
+    ndata.add(-19);
+    ndata.add(44);
+    System.out.println(ndata);
+    Radix.radixSort(ndata);
+    System.out.println(ndata);
   }
 
 }
