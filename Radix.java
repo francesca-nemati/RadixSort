@@ -31,7 +31,7 @@ public class Radix {
     }
     for (int i = 0; i <= passes; i++) {
       for (int j = 0; j < data.size(); j++) {
-        int d = data.get(j);
+        int d = data.get(0);
         if (i == 1) {
           if (Math.abs(d) > largest) largest = d;
         }
